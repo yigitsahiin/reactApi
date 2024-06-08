@@ -38,11 +38,10 @@ function App() {
         let result;
         if (selectedOption === 'football') {
           result = await hackerrankAPI.get(`football_competitions?year=${selectedYear}`);
-          setData(result.data.data); // HackerRank API'den gelen verinin iç yapısına göre
+          setData(result.data.data); 
         } else if (selectedOption === 'posts') {
-          // Post kısmında varsayılan olarak tüm verileri getirmiyoruz
-          setData([]); // Boş dizi ile başlatıyoruz
-          setPostData(null); // Boş veri ile başlatıyoruz
+          setData([]); 
+          setPostData(null); 
         }
       } catch (error) {
         console.error(error.message ?? error);
